@@ -97,7 +97,7 @@ forceatlas2 = ForceAtlas2(
                         verbose=True)
 
 positions = forceatlas2.forceatlas2_networkx_layout(G, pos=None, iterations=2000)
-nx.draw_networkx_nodes(G, positions, node_size=20, with_labels=False, node_color="blue", alpha=0.4)
+nx.draw_networkx_nodes(G, positions, node_size=20, node_color="blue", alpha=0.4)
 nx.draw_networkx_edges(G, positions, edge_color="green", alpha=0.05)
 plt.axis('off')
 plt.show()
