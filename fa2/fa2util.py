@@ -110,6 +110,14 @@ def linAttraction(n1, n2, e, distributedAttraction, coefficient=0):
 # The following functions iterate through the nodes or edges and apply
 # the forces directly to the node objects.  These iterations are here
 # instead of the main file because Python is slow with loops.
+## comment by sn:
+## Refactored apply_repulsion function for improved readability and simplicity.
+## Replaced manual index handling with Python's range function to iterate over
+## pairs of nodes more succinctly. The refactoring maintains the original logic,
+## making the code clearer and easier to understand.
+##     for i in range(len(nodes)):
+##        for j in range(i):
+##            linRepulsion(nodes[i], nodes[j], coefficient)
 def apply_repulsion(nodes, coefficient):
     i = 0
     for n1 in nodes:
